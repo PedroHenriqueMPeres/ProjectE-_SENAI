@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectE+_SENAI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79e583905a1edf6613af018741b8aede0ea50e82")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec7db845235bf46e2be5f8b5b1a9438722c8f25b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectE+_SENAI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectE+_SENAI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

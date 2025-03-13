@@ -13,6 +13,8 @@ namespace ProjectE__SENAI.Interfaces
         void Deletar(Guid id);
 
         Evento BuscarPorId(Guid id);
+
+        List<Evento> ListarProximoEvento();
         
     }
 }
