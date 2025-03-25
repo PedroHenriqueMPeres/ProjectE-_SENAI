@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using EventPlus_.Domains.StringLenght;
 
 namespace EventPlus_.Domains
 {

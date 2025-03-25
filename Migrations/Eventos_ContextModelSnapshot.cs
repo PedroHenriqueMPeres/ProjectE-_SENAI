@@ -134,37 +134,7 @@ namespace EventPlus_.Migrations
                     b.ToTable("Presenca");
                 });
 
-            modelBuilder.Entity("EventPlus_.Domains.TipoEvento", b =>
-                {
-                    b.Property<Guid>("TipoEventoID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("TituloTipoEvento")
-                        .IsRequired()
-                        .HasColumnType("VARCHAR(50)");
-
-                    b.HasKey("TipoEventoID");
-
-                    b.ToTable("TipoEvento");
-                });
-
-            modelBuilder.Entity("EventPlus_.Domains.TipoUsuario", b =>
-                {
-                    b.Property<Guid>("TipoUsuarioID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("TituloTipoUsuario")
-                        .IsRequired()
-                        .HasColumnType("VARCHAR(50)");
-
-                    b.HasKey("TipoUsuarioID");
-
-                    b.ToTable("TipoUsuario");
-                });
-
-            modelBuilder.Entity("EventPlus_.Domains.Usuario", b =>
+            modelBuilder.Entity("EventPlus_.Domains.StringLenght.Usuario", b =>
                 {
                     b.Property<Guid>("UsuarioID")
                         .ValueGeneratedOnAdd()
@@ -196,6 +166,36 @@ namespace EventPlus_.Migrations
                     b.ToTable("Usuario");
                 });
 
+            modelBuilder.Entity("EventPlus_.Domains.TipoEvento", b =>
+                {
+                    b.Property<Guid>("TipoEventoID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("TituloTipoEvento")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(50)");
+
+                    b.HasKey("TipoEventoID");
+
+                    b.ToTable("TipoEvento");
+                });
+
+            modelBuilder.Entity("EventPlus_.Domains.TipoUsuario", b =>
+                {
+                    b.Property<Guid>("TipoUsuarioID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("TituloTipoUsuario")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(50)");
+
+                    b.HasKey("TipoUsuarioID");
+
+                    b.ToTable("TipoUsuario");
+                });
+
             modelBuilder.Entity("EventPlus_.Domains.ComentarioEvento", b =>
                 {
                     b.HasOne("EventPlus_.Domains.Eventos", "Eventos")
@@ -204,7 +204,7 @@ namespace EventPlus_.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EventPlus_.Domains.Usuario", "Usuario")
+                    b.HasOne("EventPlus_.Domains.StringLenght.Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("UsuarioID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -242,7 +242,7 @@ namespace EventPlus_.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EventPlus_.Domains.Usuario", "Usuario")
+                    b.HasOne("EventPlus_.Domains.StringLenght.Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("UsuarioID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -253,7 +253,7 @@ namespace EventPlus_.Migrations
                     b.Navigation("Usuario");
                 });
 
-            modelBuilder.Entity("EventPlus_.Domains.Usuario", b =>
+            modelBuilder.Entity("EventPlus_.Domains.StringLenght.Usuario", b =>
                 {
                     b.HasOne("EventPlus_.Domains.TipoUsuario", "TipoUsuarios")
                         .WithMany()
