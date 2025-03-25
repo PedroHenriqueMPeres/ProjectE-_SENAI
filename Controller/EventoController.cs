@@ -1,5 +1,6 @@
 ﻿using EventPlus_.Domains;
 using EventPlus_.Interfaces;
+using EventPlus_.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,9 +22,7 @@ namespace EventPlus_.Controller
         /// <summary>
         /// Endpoint para cadastrar novo evento
         /// </summary>
-        [Authorize]
         [HttpPost]
-
         public IActionResult Post(Eventos eventoRepository)
         {
             try
@@ -37,7 +36,6 @@ namespace EventPlus_.Controller
             }
         }
 
-        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
@@ -53,7 +51,6 @@ namespace EventPlus_.Controller
         }
 
         [HttpGet]
-
         public IActionResult Get()
         {
             try
@@ -67,8 +64,21 @@ namespace EventPlus_.Controller
             }
         }
 
-        [HttpGet("ListarProximosEventos/{id}")]
+        [HttpGet("ListarPorId/{id}")]
+        public IActionResult ListarPorId(Guid id)
+        {
+            try
+            {
+                List<Eventos> listaEventos = _eventoRepository.ListarPorId(id);
+                return Ok(listaEventos);
+            }
+            catch (Exception error)
+            {
+                return BadRequest(error.Message);
+            }
+        }
 
+        [HttpGet("ListarProximosEventos/{id}")]
         public IActionResult Get(Guid id)
         {
             try
@@ -83,7 +93,6 @@ namespace EventPlus_.Controller
         }
 
         [HttpGet("BuscarPorId/ {id}")]
-
         public IActionResult GetById(Guid id)
         {
             try
@@ -97,7 +106,6 @@ namespace EventPlus_.Controller
             }
         }
 
-        [Authorize]
         [HttpPut("{id}")]
 
         public IActionResult Put(Guid id, Eventos novoEvento)

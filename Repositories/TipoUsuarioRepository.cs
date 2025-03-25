@@ -23,10 +23,8 @@ namespace EventPlus_.Repositories
                 if (tipoUsuarioBuscado != null)
                 {
                     tipoUsuarioBuscado.TituloTipoUsuario = tipoUsuario.TituloTipoUsuario;
-                    tipoUsuarioBuscado.TipoUsuarioID = tipoUsuario.TipoUsuarioID;
                 }
-
-                _context.SaveChanges();
+                    _context.SaveChanges();
 
             }
             catch (Exception)

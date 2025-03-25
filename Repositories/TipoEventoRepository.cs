@@ -30,7 +30,6 @@ namespace EventPlus_.Repositories
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

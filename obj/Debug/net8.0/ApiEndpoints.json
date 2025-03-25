@@ -108,7 +108,7 @@
     "ContainingType": "EventPlus_.Controller.EventoController",
     "Method": "Put",
     "RelativePath": "api/Evento/{id}",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -129,6 +129,22 @@
     "ContainingType": "EventPlus_.Controller.EventoController",
     "Method": "GetById",
     "RelativePath": "api/Evento/BuscarPorId/ {id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventPlus_.Controller.EventoController",
+    "Method": "ListarPorId",
+    "RelativePath": "api/Evento/ListarPorId/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -266,7 +282,7 @@
     "ContainingType": "EventPlus_.Controller.TipoEventoController",
     "Method": "Put",
     "RelativePath": "api/TipoEvento/{id}",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [

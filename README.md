@@ -1,1 +1,1 @@
-# EventPlus_# ProjectE-_SENAI
+OBS: 20/03/2025 - Alguns erros no postman, a API totalmente completa, todas as pastas e sem erros aparecendo. Talvez algumas mudanças vão ser necessarias para arrumar o postman mas nesse dia o codigo está sem erros e com o aviso "An error occurred while saving the entity changes. See the inner exception for details."

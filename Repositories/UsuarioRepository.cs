@@ -1,5 +1,6 @@
 ﻿using EventPlus_.Context;
 using EventPlus_.Domains;
+using EventPlus_.Domains.StringLenght;
 using EventPlus_.Interfaces;
 using EventPlus_.Utils;
 
@@ -58,7 +59,6 @@ namespace EventPlus_.Repositories
 
         public void Cadastrar(Usuario novoUsuario)
         {
-
             try
             {
                 novoUsuario.Senha = Criptografia.GerarHash(novoUsuario.Senha!);

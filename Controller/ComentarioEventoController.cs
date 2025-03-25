@@ -21,7 +21,6 @@ namespace EventPlus_.Controller
         /// <summary>
         /// Endpoint para cadastrar novo comentario do evento
         /// </summary>
-        [Authorize]
         [HttpPost]
         public IActionResult Post(ComentarioEvento novoComentarioEvento)
         {
@@ -39,7 +38,6 @@ namespace EventPlus_.Controller
         /// <summary>
         /// Endpoint para deletar novo comentario do evento
         /// </summary>
-        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {

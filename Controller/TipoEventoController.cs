@@ -1,10 +1,8 @@
-﻿using EventPlus_.Context;
-using EventPlus_.Domains;
+﻿using EventPlus_.Domains;
 using EventPlus_.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace EventPlus_.Controller
 {
@@ -30,13 +28,11 @@ namespace EventPlus_.Controller
             try
             {
                 List<TipoEvento> listaDeTipoEvento = _tipoEventoRepository.Listar();
-                return Ok(listaDeTipoEvento); 
-                
+                return Ok(listaDeTipoEvento);
             }
             catch (Exception error)
             {
                 return BadRequest(error.Message);
-               
             }
         }
 
@@ -67,13 +63,10 @@ namespace EventPlus_.Controller
             {
                 _tipoEventoRepository.Atualizar(id, tipoEvento);
                 return NoContent();
-                
-
             }
             catch (Exception error)
             {
                 return BadRequest(error.Message);
-
             }
         }
 

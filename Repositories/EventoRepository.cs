@@ -37,6 +37,7 @@ namespace EventPlus_.Repositories
             {
                 Eventos eventoBuscado = _context.Eventos.Find(id)!;
                 return eventoBuscado;
+
             }
             catch (Exception)
             {
@@ -44,13 +45,15 @@ namespace EventPlus_.Repositories
             }
         }
 
-        public void Cadastrar(Eventos evento)
+        public void Cadastrar(Eventos novoEvento)
         {
             try
             {
-                _context.Eventos.Add(evento);
+                _context.Eventos.Add(novoEvento);
+
                 _context.SaveChanges();
             }
+
             catch (Exception)
             {
                 throw;
@@ -67,6 +70,7 @@ namespace EventPlus_.Repositories
                 {
                     _context.Eventos.Remove(eventoBuscado);
                 }
+
                 _context.SaveChanges();
             }
             catch (Exception)
@@ -103,8 +107,15 @@ namespace EventPlus_.Repositories
 
         public List<Eventos> ListarProximosEventos(Guid id)
         {
-            List<Eventos> listarEventosProximos = _context.Eventos.Where(e => e.DataEvento > DateTime.Now).OrderBy(e => e.DataEvento).ToList();
-            return listarEventosProximos;
+            try
+            {
+                List<Eventos> listarEventosProximos = _context.Eventos.Where(e => e.DataEvento > DateTime.Now).OrderBy(e => e.DataEvento).ToList();
+                return listarEventosProximos;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

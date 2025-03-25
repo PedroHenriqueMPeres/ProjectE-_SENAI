@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace EventPlus_.Domains
+namespace EventPlus_.Domains.StringLenght
 {
     [Table("Usuario")]
     [Index(nameof(Email), IsUnique = true)]

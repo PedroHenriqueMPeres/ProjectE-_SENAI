@@ -1,4 +1,5 @@
 ﻿using EventPlus_.Domains;
+using EventPlus_.Domains.StringLenght;
 
 namespace EventPlus_.Interfaces
 {

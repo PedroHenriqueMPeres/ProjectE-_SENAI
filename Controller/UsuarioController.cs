@@ -1,4 +1,5 @@
 ﻿using EventPlus_.Domains;
+using EventPlus_.Domains.StringLenght;
 using EventPlus_.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -21,19 +22,21 @@ namespace EventPlus_.Controller
         /// <summary>
         /// Endpoint para cadastrar novo usuario
         /// </summary>
-        
         [HttpPost]
         public IActionResult Post(Usuario novoUsuario)
         {
             try
             {
                 _usuarioRepository.Cadastrar(novoUsuario);
-                return Created();
+
+                return StatusCode(201, novoUsuario);
             }
             catch (Exception error)
             {
                 return BadRequest(error.Message);
             }
+
+
         }
 
         /// <summary>

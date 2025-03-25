@@ -20,7 +20,6 @@ namespace EventPlus_.Controller
         /// <summary>
         /// Endpoint para deletar a presença
         /// </summary>
-        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
@@ -55,7 +54,6 @@ namespace EventPlus_.Controller
         /// <summary>
         /// Endpoint para atualizar as presenças
         /// </summary>
-        [Authorize]
         [HttpPut("{id}")]
         public IActionResult Put(Guid id, Presenca presenca)
         {

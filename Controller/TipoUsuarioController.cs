@@ -56,7 +56,6 @@ namespace EventPlus_.Controller
         /// <summary>
         /// Endpoint para atualizar os tipos de usuario
         /// </summary>
-        [Authorize]
         [HttpPut("{id}")]
         public IActionResult Put (Guid id, TipoUsuario tipoUsuario)
         {
@@ -74,7 +73,6 @@ namespace EventPlus_.Controller
         /// <summary>
         /// Endpoint para deletar os tipos de usuarios
         /// </summary>
-        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {

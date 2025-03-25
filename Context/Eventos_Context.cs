@@ -1,4 +1,5 @@
 ﻿using EventPlus_.Domains;
+using EventPlus_.Domains.StringLenght;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventPlus_.Context
@@ -26,7 +27,7 @@ namespace EventPlus_.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server = NOTE46-S28; Database = Event+_Senai; User Id = sa; Pwd = Senai@134; TrustServerCertificate=true;");
+                optionsBuilder.UseSqlServer("Server = DESKTOP-0HO9ARA\\SQLEXPRESS; Database = EventPlus; User Id = sa; Pwd = Senai@134; TrustServerCertificate=true;");
             }
         }
 
