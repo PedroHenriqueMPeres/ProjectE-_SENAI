@@ -1,7 +1,5 @@
 ﻿using EventPlus_.Domains;
 using EventPlus_.Interfaces;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EventPlus_.Controller
