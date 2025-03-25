@@ -92,20 +92,6 @@ namespace EventPlus_.Controller
             }
         }
 
-        [HttpGet("BuscarPorId/ {id}")]
-        public IActionResult GetById(Guid id)
-        {
-            try
-            {
-                Eventos novoEvento = _eventoRepository.BuscarPorId(id);
-                return Ok(novoEvento);
-            }
-            catch (Exception error)
-            {
-                return BadRequest(error.Message);
-            }
-        }
-
         [HttpPut("{id}")]
 
         public IActionResult Put(Guid id, Eventos novoEvento)

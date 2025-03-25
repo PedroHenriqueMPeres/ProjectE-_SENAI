@@ -9,8 +9,9 @@ namespace EventPlus_.Domains
         [Key]
         public Guid TipoUsuarioID { get; set; }
 
-        [Column(TypeName = "VARCHAR(50)")]
-        [Required(ErrorMessage = "O Titulo do tipo do usuario é obrigatório!")]
+        [Column(TypeName = "VARCHAR(70)")]
+        [StringLength(50, ErrorMessage = "O título deve ter no máximo 70 caracteres.")]
+
         public string? TituloTipoUsuario { get; set; }
     }
 }

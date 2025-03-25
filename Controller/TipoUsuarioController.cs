@@ -54,13 +54,24 @@ namespace EventPlus_.Controller
         }
 
         /// <summary>
-        /// Endpoint para atualizar os tipos de usuario
+        /// Endpoint para atualizar um tipo de usuário.
         /// </summary>
         [HttpPut("{id}")]
-        public IActionResult Put (Guid id, TipoUsuario tipoUsuario)
+        public IActionResult Put(Guid id, TipoUsuario tipoUsuario)
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                var tipoUsuarioExistente = _tipoUsuarioRepository.BuscarPorId(id);
+                if (tipoUsuarioExistente == null)
+                {
+                    return NotFound("Tipo de usuário não encontrado.");
+                }
+
                 _tipoUsuarioRepository.Atualizar(id, tipoUsuario);
                 return NoContent();
             }

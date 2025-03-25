@@ -1,5 +1,6 @@
 ﻿using EventPlus_.Domains;
 using EventPlus_.Interfaces;
+using EventPlus_.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +18,25 @@ namespace EventPlus_.Controller
         {
             _presencaRepository = presencaRepository;
         }
+
+        /// <summary>
+        /// Endpoint para cadastrar novo evento
+        /// </summary>
+        [HttpPost]
+        public IActionResult Post(Presenca presencaRepository)
+        {
+            try
+            {
+                _presencaRepository.Inscrever(presencaRepository);
+                return Created();
+            }
+            catch (Exception error)
+            {
+                return BadRequest(error.Message);
+            }
+        }
+
+
         /// <summary>
         /// Endpoint para deletar a presença
         /// </summary>
@@ -71,7 +91,7 @@ namespace EventPlus_.Controller
         /// <summary>
         /// Endpoint para fazer uma lista das presenças
         /// </summary>
-        [HttpGet("ListarPresencas")]
+        [HttpGet()]
         public IActionResult Get()
         {
             try

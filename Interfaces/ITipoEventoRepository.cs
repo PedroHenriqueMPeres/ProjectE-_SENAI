@@ -12,5 +12,6 @@ namespace EventPlus_.Interfaces
         void Deletar(Guid id);
 
         TipoEvento BuscarPorId(Guid id);
+        
     }
 }

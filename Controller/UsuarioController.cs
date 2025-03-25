@@ -28,8 +28,9 @@ namespace EventPlus_.Controller
             try
             {
                 _usuarioRepository.Cadastrar(novoUsuario);
-
+                
                 return StatusCode(201, novoUsuario);
+                
             }
             catch (Exception error)
             {
@@ -42,7 +43,7 @@ namespace EventPlus_.Controller
         /// <summary>
         /// Endpoint para buscar usuario por Id
         /// </summary>
-        [HttpGet]
+        [HttpGet("BuscarPorId/{id}")]
         public IActionResult GetById(Guid id)
         {
             try

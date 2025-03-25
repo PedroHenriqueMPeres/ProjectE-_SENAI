@@ -2,6 +2,7 @@
 using EventPlus_.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace EventPlus_.Controller
 {
     [Route("api/[controller]")]
@@ -44,6 +45,7 @@ namespace EventPlus_.Controller
             {
                 _tipoEventoRepository.Cadastrar(novoTipoEvento);
                 return Created();
+                
             }
             catch (Exception error)
             {

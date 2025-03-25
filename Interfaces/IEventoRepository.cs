@@ -14,8 +14,6 @@ namespace EventPlus_.Interfaces
 
         List<Eventos> ListarPorId(Guid id);
 
-        Eventos BuscarPorId(Guid id);
-
         List<Eventos> ListarProximosEventos(Guid id);
     }
 }
