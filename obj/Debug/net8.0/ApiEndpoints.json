@@ -420,7 +420,7 @@
     "Parameters": [
       {
         "Name": "novoUsuario",
-        "Type": "EventPlus_.Domains.Usuario",
+        "Type": "EventPlus_.Domains.StringLenght.Usuario",
         "IsRequired": true
       }
     ],
