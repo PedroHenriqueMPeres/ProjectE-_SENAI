@@ -4982,11 +4982,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\54571279825\\Desktop\\EventPlus_API\\EventPlus_.csproj",
+      "projectUniqueName": "C:\\Users\\54571279825\\Desktop\\ProjectE-_SENAI\\EventPlus_.csproj",
       "projectName": "EventPlus_",
-      "projectPath": "C:\\Users\\54571279825\\Desktop\\EventPlus_API\\EventPlus_.csproj",
+      "projectPath": "C:\\Users\\54571279825\\Desktop\\ProjectE-_SENAI\\EventPlus_.csproj",
       "packagesPath": "C:\\Users\\54571279825\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\54571279825\\Desktop\\EventPlus_API\\obj\\",
+      "outputPath": "C:\\Users\\54571279825\\Desktop\\ProjectE-_SENAI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
