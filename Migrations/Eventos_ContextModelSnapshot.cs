@@ -188,8 +188,8 @@ namespace EventPlus_.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("TituloTipoUsuario")
-                        .IsRequired()
-                        .HasColumnType("VARCHAR(50)");
+                        .HasMaxLength(50)
+                        .HasColumnType("VARCHAR(70)");
 
                     b.HasKey("TipoUsuarioID");
 

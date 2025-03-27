@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventPlus_.Migrations
 {
     [DbContext(typeof(Eventos_Context))]
-    [Migration("20250325130455_Db")]
+    [Migration("20250327192711_Db")]
     partial class Db
     {
         /// <inheritdoc />
@@ -191,8 +191,8 @@ namespace EventPlus_.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("TituloTipoUsuario")
-                        .IsRequired()
-                        .HasColumnType("VARCHAR(50)");
+                        .HasMaxLength(50)
+                        .HasColumnType("VARCHAR(70)");
 
                     b.HasKey("TipoUsuarioID");
 

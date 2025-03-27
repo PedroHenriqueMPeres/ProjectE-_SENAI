@@ -42,7 +42,7 @@ namespace EventPlus_.Migrations
                 columns: table => new
                 {
                     TipoUsuarioID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    TituloTipoUsuario = table.Column<string>(type: "VARCHAR(50)", nullable: false)
+                    TituloTipoUsuario = table.Column<string>(type: "VARCHAR(70)", maxLength: 50, nullable: true)
                 },
                 constraints: table =>
                 {

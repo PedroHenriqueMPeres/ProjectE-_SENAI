@@ -526,3 +526,5 @@ C:\Users\54571279825\Desktop\ProjectE-_SENAI\obj\Debug\net8.0\staticwebassets.up
 C:\Users\54571279825\Desktop\ProjectE-_SENAI\obj\Debug\net8.0\EventPlus_.csproj.Up2Date
 C:\Users\54571279825\Desktop\ProjectE-_SENAI\obj\Debug\net8.0\EventPlus_.genruntimeconfig.cache
 C:\Users\54571279825\Desktop\ProjectE-_SENAI\obj\Debug\net8.0\ref\EventPlus_.dll
+C:\Users\54571279825\Desktop\ProjectE-_SENAI\bin\Debug\net8.0\EventPlus_.xml
+C:\Users\54571279825\Desktop\ProjectE-_SENAI\obj\Debug\net8.0\EventPlus_.xml

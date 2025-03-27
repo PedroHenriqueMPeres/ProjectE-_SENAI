@@ -158,6 +158,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EventPlus.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "api/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDTO",
+        "Type": "EventPlus_.DTO.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EventPlus_.Controller.PresencaController",
     "Method": "Post",
     "RelativePath": "api/Presenca",
@@ -429,7 +445,7 @@
   {
     "ContainingType": "EventPlus_.Controller.UsuarioController",
     "Method": "Get",
-    "RelativePath": "api/Usuario/BuscarPorEmailESenha/{email}, {senha}",
+    "RelativePath": "api/Usuario/BuscarPorEmailESenha",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -437,12 +453,12 @@
       {
         "Name": "email",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "senha",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

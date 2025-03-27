@@ -57,8 +57,9 @@ namespace EventPlus_.Controller
             }
         }
 
-        [HttpGet("BuscarPorEmailESenha/{email}, {senha}")]
-        public IActionResult Get(string email, string senha)
+        [HttpGet("BuscarPorEmailESenha")]
+        public IActionResult Get([FromQuery] string email, [FromQuery] string senha)
+
         {
             try
             {
